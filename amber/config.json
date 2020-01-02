@@ -3,6 +3,9 @@
     "PREFIX": "",
     "TOKEN": "",
     "plugins": {
+        "algebra": {
+            "path": "plugins/algebra.py"
+        },
         "8ball": {
             "path": "plugins/eightball.py"
         },
