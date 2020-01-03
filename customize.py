@@ -1,6 +1,5 @@
 import json
 import os
-import re
 
 def write(fname, cf):
     with open(fname, "w") as f:
@@ -81,7 +80,7 @@ while 1:
                 print("No such command " + name)
     
     elif act == 6:
-        c = re.escape(input("Absolute tesseract path: ").strip())
+        c = input("Absolute tesseract path: ").strip().replace('\\'.'\\\\')
         config["tools"]["ocr"]["tesseract_path"] = c
     
     elif act == 7:
