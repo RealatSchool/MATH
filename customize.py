@@ -1,5 +1,6 @@
 import json
 import os
+import re
 
 def write(fname, cf):
     with open(fname, "w") as f:
@@ -39,7 +40,8 @@ Your options are:\n
 \t3. Change prefix
 \t4. Change color (must be hexadecimal)
 \t5. Modify command
-\t6. Exit\n""")
+\t6. Change tesseract path
+\t7. Exit\n""")
 
 act = input(": ").strip()
 
@@ -77,8 +79,12 @@ while 1:
 
             except KeyError:
                 print("No such command " + name)
-        
+    
     elif act == 6:
+        c = re.escape(input("Absolute tesseract path: ").strip())
+        config["tools"]["ocr"]["tesseract_path"] = c
+    
+    elif act == 7:
         break
 
     print()
