@@ -24,5 +24,11 @@
             },
             "path": "plugins/help.py"
         }
+    },
+    "tools": {
+        "ocr": {
+             "path": "tools/ocr.py",
+             "tesseract_path": ""
+        }
     }
 }
