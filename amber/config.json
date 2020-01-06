@@ -6,6 +6,13 @@
         "algebra": {
             "path": "plugins/algebra.py"
         },
+        "graph": {
+            "density": 500,
+             "scale": {
+                 "x": 10,
+                 "y": 10
+            }
+        }
         "8ball": {
             "path": "plugins/eightball.py"
         },
