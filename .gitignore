@@ -1,3 +1,4 @@
 secret/
 __pycache__/
 amber/config.json.bak
+amber/config.json
