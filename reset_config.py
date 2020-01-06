@@ -4,6 +4,16 @@ with open("amber/config.json", 'w') as f:
     "PREFIX": "",
     "TOKEN": "",
     "plugins": {
+        "algebra": {
+            "path": "plugins/algebra.py"
+        },
+        "graph": {
+            "density": 500,
+             "scale": {
+                 "x": 10,
+                 "y": 10
+            }
+        },
         "8ball": {
             "path": "plugins/eightball.py"
         },
@@ -21,6 +31,12 @@ with open("amber/config.json", 'w') as f:
                 "help": "Displays this message"
             },
             "path": "plugins/help.py"
+        }
+    },
+    "tools": {
+        "ocr": {
+             "path": "tools/ocr.py",
+             "tesseract_path": ""
         }
     }
 }""")
