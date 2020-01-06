@@ -23,7 +23,7 @@ class AlgebraSession:
                 for answer in answers:
                     response = response + answer + ", "
                 response = response[:-2]
-	await self.client.send(response, message.channel)
+        await self.client.send(response, message.channel)
 
 def load(client, config):
     return AlgebraSession(client, config)
