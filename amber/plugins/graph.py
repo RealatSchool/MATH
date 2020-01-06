@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plot
 import sympy
-import StringIO
+from io import StringIO
 import discord
 
 class GraphSession:
@@ -28,7 +28,7 @@ class GraphSession:
 	        response = "The format of this command is <equation> <variable to solve for>!"
         c[2] = c[2].replace("=", "").replace("f(x)", "").replace("y", "")
         try:
-            picture = discord.File(graph(c[2], c[3])
+            picture = discord.File(graph(c[2], c[3]))
         except:
             await self.client.send("An error occurred! Please try again.")
         else:
