@@ -5,7 +5,7 @@ Amber is a framework for making Discord bots. It contains only a few sample plug
 
 Amber takes its inspiration from [pearl](https://github.com/defund/pearl), and is built on [discord.py](https://github.com/Rapptz/discord.py).
 
-If you'd like to see an example of what the core of Amber is like, [invite it!](https://discordapp.com/api/oauth2/authorize?client_id=661363577327714332&permissions=0&scope=bot)
+If you'd like to see an example of what MATH is like, [invite it!](https://discordapp.com/api/oauth2/authorize?client_id=663810480258678804&permissions=0&scope=bot)
 
 
 ## Requirements
