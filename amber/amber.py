@@ -87,6 +87,8 @@ class Amber:
     async def send(self, message, channel):
         await channel.send(message)
         
+    async def send_file(self, file, channel):
+        await channel.send(file=file)
 
     async def embed(self, embed, channel):
         await channel.send(embed=embed)

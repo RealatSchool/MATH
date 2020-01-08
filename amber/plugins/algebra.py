@@ -23,10 +23,10 @@ class AlgebraSession:
             if len(answers) == 0:
                 response = "There are no solutions!"
             else:
-                response = "The answer(s) are "
+                response = "The answer(s) are **"
                 for answer in answers:
-                    response = response + str(answer) + ", "
-                response = response[:-2]
+                    response = response + str(answer).replace("*", "\*") + "** and **"
+                response = response[:-7]
         await self.client.send(response, message.channel)
 
 def load(client, config):
