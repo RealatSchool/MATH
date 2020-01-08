@@ -13,11 +13,11 @@ class AlgebraSession:
     async def respond(self, message):
         #split to get the equation and then turn it from a string into something that sympy can understand
         c = message.content.strip().split()
-        if len(c) != 3:
+        if len(c) != 2:
             response = "The format of this command is <equation>!"
         else:
             #split the equation into 2 parts using the = sign as the divider, parse, and turn into an equation sympy can understand - use common notation not python notation https://stackoverflow.com/questions/59632620/sympy-has-syntax-errors
-            equation = Eq(parse_expr(c[2].split("=")[0], transformations=self.transformations), parse_expr(c[2].split("=")[1], transformations=self.transformations))
+            equation = Eq(parse_expr(c[1].split("=")[0], transformations=self.transformations), parse_expr(c[1].split("=")[1], transformations=self.transformations))
             answers = solve(equation)
             #check for answers and send them if there are any
             if len(answers) == 0:
