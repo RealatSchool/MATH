@@ -8,11 +8,13 @@
         },
         "graph": {
             "path": "plugins/graph.py",
-            "density": 500,
+            "density": 50,
              "scale": {
                  "x": 10,
                  "y": 10
-            }
+            },
+            "save_location": "/var/www/html/images/",
+            "web_address": "https://example.com/images/"
         },
         "8ball": {
             "path": "plugins/eightball.py"
@@ -25,6 +27,8 @@
         },
         "help": {
             "commands": {
+                "algebra": "Solve algebra problems",
+                "graph": "Graph a function",
                 "8ball": "Fortunes and advice",
                 "about": "General information",
                 "hello": "Amber says hello",
