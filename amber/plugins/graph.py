@@ -1,17 +1,12 @@
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plot
-from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.figure import Figure
-from sympy import *
 from io import BytesIO, StringIO
-import discord
 from sympy.parsing.sympy_parser import parse_expr, standard_transformations, implicit_multiplication_application, convert_xor
-import shutil
 import string
 import os
 import random
-
 class GraphSession:
 
 
