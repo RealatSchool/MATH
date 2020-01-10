@@ -17,6 +17,7 @@ class GraphSession:
     def __init__(self, client, config):
         self.client = client
         self.config = config
+	self.transformations = (standard_transformations + (implicit_multiplication_application,) + (convert_xor,))
 	  
     def graph(self, f, variable):
         density = self.config["density"] #number of points per unit
@@ -24,7 +25,7 @@ class GraphSession:
         fig=Figure()
         ax=fig.add_subplot(111)
         for point in range(density * scale["x"]): #iterate through all the points in the plot defined by the scale and density
-	        ax.plot(point/density, parse_expr(f.replace(variable,str(round(point/density,2)))).evalf()) #set the y coordinate equal to the sympy evaluation for that x value
+	        ax.plot(point/density, parse_expr(f.replace(variable,str(round(point/density,2))), transformations=transformations).evalf()) #set the y coordinate equal to the sympy evaluation for that x value
         exists = True
         while exists:
             filename = ''.join(random.choice(string.ascii_letters) for i in range(15)) + ".png"
