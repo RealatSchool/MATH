@@ -10,6 +10,7 @@ from sympy.parsing.sympy_parser import parse_expr, standard_transformations, imp
 import shutil
 import string
 import os
+import random
 
 class GraphSession:
 
