@@ -25,6 +25,10 @@
         "hello": {
             "path": "plugins/hello.py"
         },
+        "read": {
+            "path": "plugins/read.py",
+            "file_types": [".png", ".jpg", ".jpeg"]
+        },
         "help": {
             "commands": {
                 "algebra": "Solve algebra problems",
