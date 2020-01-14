@@ -6,16 +6,6 @@
         "algebra": {
             "path": "plugins/algebra.py"
         },
-        "graph": {
-            "path": "plugins/graph.py",
-            "density": 50,
-             "scale": {
-                 "x": 10,
-                 "y": 10
-            },
-            "save_location": "/var/www/html/images/",
-            "web_address": "https://example.com/images/"
-        },
         "8ball": {
             "path": "plugins/eightball.py"
         },
