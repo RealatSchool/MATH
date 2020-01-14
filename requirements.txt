@@ -3,3 +3,4 @@ sympy
 pytesseract
 matplotlib
 pillow
+requests
