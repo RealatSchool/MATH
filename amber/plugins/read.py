@@ -1,6 +1,6 @@
-import ../tools/ocr
 import requests
 from io import BytesIO
+import importlib
 
 class ReadSession:
 
@@ -8,6 +8,7 @@ class ReadSession:
     def __init__(self, client, config):
         self.client = client
         self.config = config
+        importlib.import_module("tools.ocr", self)
 	
 	
     async def respond(self, message):
@@ -24,4 +25,4 @@ class ReadSession:
         await self.client.send(response, message.channel)
 
 def load(client, config):
-    return AlgebraSession(client, config)
+    return ReadSession(client, config)
