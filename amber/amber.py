@@ -59,12 +59,12 @@ class Amber:
             if message.author == self.client.user:
                 return
 
-            log.debug("Message received from %s: %s", message.author, message.content.strip())
+            log.debug("Message received from %s: %s", message.author, message.content)
 
-            c = message.content.strip()
+            c = message.content
 
             if c.startswith(self.conf["PREFIX"]):
-                c = message.content.replace(self.conf["PREFIX"], "").strip().split()
+                c = message.content.replace(self.conf["PREFIX"], "").split()
 
                 if c[0] in self.commands.keys():
                     if callable(getattr(self.commands[c[0]], "respond", None)):
